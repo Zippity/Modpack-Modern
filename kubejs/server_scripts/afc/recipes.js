@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * 
  * @param {Internal.RecipesEventJS} event 
@@ -243,6 +245,21 @@ const registerAFCRecipes = (event) => {
 		.EUt(20)
 
 	//#endregion
+
+	//region gt sap processing
+	event.recipes.gtceu.fluid_heater('maple_sap_condense')
+		.inputFluids(Fluid.of('afc:maple_sap', 4000))
+		.outputFluids(Fluid.of('afc:maple_syrup', 100))
+		.duration(20*25)
+		.EUt(GTValues.VA[GTValues.ULV])
+	event.recipes.gtceu.fluid_heater('birch_sap_condense')
+		.inputFluids(Fluid.of('afc:birch_sap', 8000))
+		.outputFluids(Fluid.of('afc:birch_syrup', 100))
+		.duration(20*35)
+		.EUt(GTValues.VA[GTValues.ULV])
+	
+	
+	//endregion
 
 	event.recipes.gtceu.fluid_solidifier('maple_syrup')
 		.inputFluids(Fluid.of('afc:maple_syrup', 100))

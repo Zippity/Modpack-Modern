@@ -1,3 +1,5 @@
+"use strict";
+
 function registerTFGSpaceBlocks(event) {
 
 	// Dimension markers
@@ -124,6 +126,20 @@ function registerTFGSpaceBlocks(event) {
 		.fullBlock(true)
 		.opaque(true)
 
+	event.create('tfg:rock/hardened_red_granite')
+		.stoneSoundType()
+		.requiresTool(true)
+		.item(item => {
+			item.modelJson({ parent: 'gtceu:item/red_granite' })
+		})
+		.tagBlock('tfc:can_carve')
+		.tagBoth('forge:stone')
+		.tagBoth('tfc:rock/hardened')
+		.tagBlock('minecraft:mineable/pickaxe')
+		.mapColor('terracotta_red')
+		.fullBlock(true)
+		.opaque(true)
+
 	// Loose stones
 
 	event.create('tfg:loose/moon_stone', 'tfc:loose_rock')
@@ -182,6 +198,14 @@ function registerTFGSpaceBlocks(event) {
 		.tagItem('tfc:rock_knapping')
 		.tagItem('tfc:metamorphic_rock')
 
+	event.create('tfg:loose/red_granite', 'tfc:loose_rock')
+		.stoneSoundType()
+		.itemTexture('tfg:item/loose/red_granite')
+		.tagBlock('tfc:loose_rocks')
+		.tagItem('tfc:any_knapping')
+		.tagItem('tfc:rock_knapping')
+		.tagItem('tfc:igneous_intrusive_rock')
+
 	// Spikes
 
 	event.create('tfg:spike/moon_stone_spike', 'tfc:rock_spike')
@@ -209,6 +233,10 @@ function registerTFGSpaceBlocks(event) {
 		.noItem()
 
 	event.create('tfg:spike/permafrost_spike', 'tfc:rock_spike')
+		.stoneSoundType()
+		.noItem()
+
+	event.create('tfg:spike/red_granite_spike', 'tfc:rock_spike')
 		.stoneSoundType()
 		.noItem()
 
@@ -324,39 +352,6 @@ function registerTFGSpaceBlocks(event) {
 			.mapColor(`color_${color}`)
 			.fullBlock(true)
 			.opaque(true)
-		//Raw Sandstone Wall
-		event.create(`tfg:sandstone/wall/raw/fluorapatite/${color}`, 'wall')
-			.textureAll(`tfg:block/planets/venus/sandstone_bottom_fluorapatite_${color}`)
-			.hardness(0.8)
-			.resistance(0.8)
-			.soundType('stone')
-			.requiresTool(true)
-			.tagBlock('minecraft:mineable/pickaxe')
-			.mapColor(`color_${color}`)
-			.fullBlock(true)
-			.opaque(true)
-		//Raw Sandstone Slab
-		event.create(`tfg:sandstone/slab/raw/fluorapatite/${color}`, 'slab')
-			.textureAll(`tfg:block/planets/venus/sandstone_bottom_fluorapatite_${color}`)
-			.hardness(0.8)
-			.resistance(0.8)
-			.soundType('stone')
-			.requiresTool(true)
-			.tagBlock('minecraft:mineable/pickaxe')
-			.mapColor(`color_${color}`)
-			.fullBlock(true)
-			.opaque(true)
-		//Raw Sandstone Stairs
-		event.create(`tfg:sandstone/stairs/raw/fluorapatite/${color}`, 'stairs')
-			.textureAll(`tfg:block/planets/venus/sandstone_bottom_fluorapatite_${color}`)
-			.hardness(0.8)
-			.resistance(0.8)
-			.soundType('stone')
-			.requiresTool(true)
-			.tagBlock('minecraft:mineable/pickaxe')
-			.mapColor(`color_${color}`)
-			.fullBlock(true)
-			.opaque(true)
 		//Smooth Sandstone
 		event.create(`tfg:sandstone/smooth/fluorapatite/${color}`)
 			.textureAll(`tfg:block/planets/venus/sandstone_top_fluorapatite_${color}`)
@@ -366,39 +361,6 @@ function registerTFGSpaceBlocks(event) {
 			.requiresTool(true)
 			.tagBoth('forge:sandstone')
 			.tagItem('forge:sandstone/fluorapatite')
-			.tagBlock('minecraft:mineable/pickaxe')
-			.mapColor(`color_${color}`)
-			.fullBlock(true)
-			.opaque(true)
-		//Smooth Sandstone Wall
-		event.create(`tfg:sandstone/smooth/wall/fluorapatite/${color}`, 'wall')
-			.textureAll(`tfg:block/planets/venus/sandstone_top_fluorapatite_${color}`)
-			.hardness(0.8)
-			.resistance(0.8)
-			.soundType('stone')
-			.requiresTool(true)
-			.tagBlock('minecraft:mineable/pickaxe')
-			.mapColor(`color_${color}`)
-			.fullBlock(true)
-			.opaque(true)
-		//Smooth Sandstone Slab
-		event.create(`tfg:sandstone/smooth/slab/fluorapatite/${color}`, 'slab')
-			.textureAll(`tfg:block/planets/venus/sandstone_top_fluorapatite_${color}`)
-			.hardness(0.8)
-			.resistance(0.8)
-			.soundType('stone')
-			.requiresTool(true)
-			.tagBlock('minecraft:mineable/pickaxe')
-			.mapColor(`color_${color}`)
-			.fullBlock(true)
-			.opaque(true)
-		//Smooth Sandstone Stairs
-		event.create(`tfg:sandstone/smooth/stairs/fluorapatite/${color}`, 'stairs')
-			.textureAll(`tfg:block/planets/venus/sandstone_top_fluorapatite_${color}`)
-			.hardness(0.8)
-			.resistance(0.8)
-			.soundType('stone')
-			.requiresTool(true)
 			.tagBlock('minecraft:mineable/pickaxe')
 			.mapColor(`color_${color}`)
 			.fullBlock(true)

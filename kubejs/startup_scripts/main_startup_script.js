@@ -1,6 +1,8 @@
 // priority: 0
+"use strict";
 
 StartupEvents.registry('item', event => {
+	registerBetterEndItems(event)
     registerGTCEuItems(event)
     registerTFGItems(event)
 })
@@ -16,12 +18,14 @@ StartupEvents.registry('entity_type', event => {
 
 BlockEvents.modification(event => {
 	registerAdAstraBlockModifications(event)
+	registerSpeciesBlockModifications(event)
 })
 
 ItemEvents.modification(event => {
 	registerBeneathItemModifications(event)
 	registerConstructionWandsItemModifications(event)
 	registerCreateItemModifications(event)
+	registerFirmalifeItemModifications(event)
 	registerGTCEuItemModifications(event)
 	registerMinecraftItemModifications(event)
 })
@@ -53,6 +57,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 	registerGTCEuMaterials(event)
 	registerGreateMaterials(event)
 	registerTFGMaterials(event)
+	registerTFGNuclearMaterials(event)
 })
 
 GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
@@ -68,8 +73,8 @@ GTCEuStartupEvents.registry('gtceu:dimension_marker', event => {
 	registerTFGDimensionMarkers(event)
 })
 
-TFCEvents.registerFoodTrait(event => {
-	registerTFGFoodTraits(event)
+GTCEuStartupEvents.registry("gtceu:element", event => {
+	registerTFGElement(event)
 })
 
 Platform.mods.primitive_creatures.name = "Primitive Creatures";

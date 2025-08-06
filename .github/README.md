@@ -26,7 +26,7 @@
 
 <br/>
 
-![Logo Large](https://github.com/TerraFirmaGreg-Team/.github/blob/main/storage/modern/title/1920x720_with_background_4.png?raw=true)
+![Logo_Title](https://github.com/TerraFirmaGreg-Team/.github/blob/main/storage/modern/title_logo.png?raw=true)
 
 ---
 <h2 align="center"> TerraFirmaGreg-Modern is a deep survival and tech modpack for Minecraft 1.20.1, seamlessly fusing together TerraFirmaCraft and GregTech. </h2>
@@ -60,13 +60,14 @@ Want to help translate? Please read [this](../kubejs/README%20IF%20TRANSLATING.m
 
 ---
 
-![Image Readme](https://github.com/TerraFirmaGreg-Team/.github/blob/main/storage/modern/unedited/credit_tfg_dev_team.png?raw=true)
+![Image_Readme](https://github.com/TerraFirmaGreg-Team/.github/blob/main/storage/modern/image_readme.png?raw=true)
 
 <h2 align="center">External Credits and Special Thanks</h2>
 
-- WithersChat from the Monifactory team for the universal circuit textures.
-- GregTech Community Pack Modern for most of their quest text.
-- Better End for some assets.
+- WithersChat from the [Monifactory](https://www.curseforge.com/minecraft/modpacks/monifactory) team for the universal circuit textures.
+- [GregTech Community Pack Modern](https://www.curseforge.com/minecraft/modpacks/gregtech-community-pack-modern) for most of their quest text.
+- [Better End](https://www.curseforge.com/minecraft/mc-mods/betterend) for some assets.
+- Uni for Mars' dunes terrain generation.
 
 <!-- Links: -->
 [TerraFirmaCraft]: https://www.curseforge.com/minecraft/mc-mods/terrafirmacraft
